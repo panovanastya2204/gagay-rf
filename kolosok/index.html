@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F6F4FB">
+<title>Предложение для Оли Соколовой — Анастасия Гагай</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F4FB;
+  --card:#FFFFFF;
+  --ink:#241E33;
+  --muted:#6E6785;
+  --violet:#7E2FC4;
+  --violet-deep:#5B1F91;
+  --violet-bright:#A855F7;
+  --lav:#F1E9FC;
+  --lav-line:#E6DBF7;
+  --gold:#B5761F;
+  --gold-soft:#FDF3E3;
+  --radius:26px;
+  --maxw:700px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:17px;
+  line-height:1.45;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0 max(14px, env(safe-area-inset-left)) calc(48px + env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-right));
+}
+p{margin:0 0 12px}
+a{color:var(--violet)}
+
+/* шапка */
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:18px 20px;
+  margin:14px 0 16px;
+  background:var(--card);
+  border-radius:20px;
+  box-shadow:0 2px 14px rgba(94,44,140,.06);
+}
+.topbar .who{font-weight:800;font-size:17px;color:var(--violet);letter-spacing:.01em;line-height:1.2}
+.topbar .for{font-size:14px;color:var(--muted);line-height:1.3;margin-top:2px}
+.topbar .avatar{
+  width:56px;height:56px;flex:none;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 0 0 3px var(--lav);
+}
+
+/* секции-карточки */
+section{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:24px 20px;
+  margin:0 0 16px;
+  box-shadow:0 2px 16px rgba(94,44,140,.06);
+}
+section.lav{background:linear-gradient(180deg,#F7F1FE 0%,#FFFFFF 70%)}
+h2{
+  font-size:23px;
+  line-height:1.2;
+  font-weight:800;
+  letter-spacing:-.02em;
+  margin:0 0 14px;
+  color:var(--ink);
+}
+h2 .em{margin-right:8px}
+h3{
+  font-size:18px;
+  font-weight:700;
+  line-height:1.25;
+  margin:24px 0 10px;
+}
+h3:first-child{margin-top:0}
+.lead{color:var(--muted)}
+
+/* воронка */
+.funnel-name{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:999px;
+  background:var(--violet);
+  color:#fff;
+  font-weight:700;
+  font-size:15px;
+  margin:0 0 16px;
+}
+.step{
+  padding:13px 16px;
+  border-radius:16px;
+  background:var(--lav);
+  font-size:16px;
+  font-weight:600;
+  line-height:1.35;
+}
+.step .src{display:block;font-weight:500;color:var(--muted);font-size:15px}
+.step.money{
+  background:var(--gold-soft);
+  border:1.5px solid #EBCB96;
+}
+.step.money .tag{
+  display:block;
+  margin-top:3px;
+  font-size:14px;
+  font-weight:700;
+  color:var(--gold);
+}
+.arrow{
+  height:22px;
+  display:grid;
+  place-items:center;
+  color:var(--violet-bright);
+  font-size:15px;
+  animation:bob 2.4s ease-in-out infinite;
+}
+.branch{
+  margin:8px 0 0 14px;
+  padding:8px 14px;
+  border-left:2px dotted var(--gold);
+  font-size:15px;
+  color:var(--muted);
+}
+@keyframes bob{0%,100%{transform:translateY(-1px)}50%{transform:translateY(2px)}}
+
+/* задачи — второстепенный блок */
+details.tasks{
+  background:#FBFAFE;
+  border:1px solid var(--lav-line);
+  border-radius:18px;
+  padding:2px 16px;
+  margin:18px 0 0;
+}
+details.tasks summary{
+  list-style:none;
+  cursor:pointer;
+  padding:14px 0;
+  font-size:15px;
+  font-weight:700;
+  color:var(--violet);
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+details.tasks summary::-webkit-details-marker{display:none}
+details.tasks summary .chev{margin-left:auto;transition:transform .2s ease;font-size:13px}
+details.tasks[open] summary .chev{transform:rotate(180deg)}
+details.tasks ol{
+  margin:0 0 14px;
+  padding-left:1.2em;
+  font-size:15px;
+  line-height:1.4;
+  color:var(--muted);
+}
+details.tasks li{margin-bottom:8px}
+
+/* срок и цена */
+.terms{margin-top:18px}
+.terms .row{
+  display:flex;
+  gap:10px;
+  align-items:baseline;
+  padding:11px 0;
+  border-bottom:1px solid var(--lav-line);
+  font-size:16px;
+}
+.terms .row:last-of-type{border-bottom:0}
+.terms .k{color:var(--muted);flex:none;min-width:66px;font-size:15px}
+.terms ul{margin:8px 0 4px;padding-left:1.15em;color:var(--muted);font-size:15px}
+.terms ul li{margin-bottom:6px}
+
+/* почему */
+.why-item{
+  display:flex;
+  gap:12px;
+  padding:14px 0;
+  border-bottom:1px solid var(--lav-line);
+}
+.why-item:last-child{border-bottom:0}
+.why-item .ic{font-size:22px;line-height:1.1;flex:none}
+.why-item b{display:block;margin-bottom:3px;font-weight:700}
+.why-item span.t{color:var(--muted);font-size:16px}
+
+/* карточки примеров */
+.ex{
+  background:#FBFAFE;
+  border:1px solid var(--lav-line);
+  border-radius:20px;
+  padding:16px;
+  margin:0 0 14px;
+}
+.ex:last-child{margin-bottom:0}
+.shot{
+  display:block;width:100%;height:auto;
+  border-radius:14px;
+  border:1px solid var(--lav-line);
+  margin:0 0 14px;
+}
+.shot.missing{
+  min-height:110px;
+  background:repeating-linear-gradient(45deg,#fff,#fff 10px,#F3EEFB 10px,#F3EEFB 20px);
+}
+blockquote{
+  margin:0 0 12px;
+  padding:10px 14px;
+  background:var(--lav);
+  border-radius:14px;
+  color:#4A4160;
+  font-size:15px;
+  line-height:1.4;
+}
+.cue{
+  display:block;
+  font-size:13.5px;
+  line-height:1.35;
+  color:var(--muted);
+  margin:-4px 0 12px 2px;
+}
+.cue b{color:var(--violet);font-weight:700}
+.hint{
+  font-size:14px;
+  color:var(--muted);
+  background:var(--lav);
+  border-radius:14px;
+  padding:10px 14px;
+  margin:0 0 16px;
+}
+
+/* кнопки */
+.btn{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-height:52px;
+  width:100%;
+  padding:12px 16px;
+  margin:0 0 8px;
+  border-radius:16px;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:700;
+  line-height:1.25;
+  word-break:break-word;
+  -webkit-tap-highlight-color:transparent;
+  transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+.btn .ic{font-size:19px;flex:none}
+.btn .go{margin-left:auto;flex:none;font-size:15px;opacity:.7}
+.btn:active{transform:translateY(2px)}
+
+/* лид-магнит — главное действие */
+.btn.magnet{
+  background:var(--violet);
+  color:#fff;
+  box-shadow:0 4px 0 var(--violet-deep);
+}
+.btn.magnet:active{box-shadow:0 1px 0 var(--violet-deep)}
+
+/* источник: видео, интервью, пост */
+.btn.source{
+  background:#fff;
+  color:var(--violet);
+  border:1.5px solid var(--lav-line);
+  font-weight:600;
+}
+.btn.source:active{background:var(--lav)}
+
+.btn:last-child{margin-bottom:0}
+
+/* форматы */
+.fmt{
+  border:1px solid var(--lav-line);
+  border-radius:20px;
+  padding:18px 16px;
+  margin:0 0 14px;
+  background:#fff;
+}
+.fmt:last-child{margin-bottom:0}
+.fmt.pick{
+  background:linear-gradient(180deg,#F5ECFE 0%,#FFFFFF 75%);
+  border:2px solid var(--violet-bright);
+}
+.badge{
+  display:inline-block;
+  padding:6px 13px;
+  border-radius:999px;
+  background:var(--violet);
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+  margin:0 0 10px;
+}
+.fmt p{color:var(--muted);font-size:16px}
+.fmt h3{color:var(--ink)}
+
+/* финал */
+.final{
+  background:linear-gradient(135deg,#7E2FC4 0%,#A855F7 100%);
+  color:#fff;
+  border-radius:var(--radius);
+  padding:26px 22px;
+  margin:22px 0 0;
+  box-shadow:0 8px 24px rgba(126,47,196,.25);
+}
+.final p{font-size:17px;line-height:1.45;margin:0 0 14px;opacity:.95}
+.final p.q{font-size:21px;font-weight:800;margin:0;opacity:1}
+
+/* появление блоков */
+.rv{opacity:0;transform:translateY(14px)}
+.rv.on{opacity:1;transform:none;transition:opacity .5s ease, transform .5s ease}
+
+@media (min-width:700px){
+  body{font-size:18px}
+  h2{font-size:27px}
+  section{padding:30px 28px}
+  .wrap{padding-left:20px;padding-right:20px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div>
+      <div class="who">Гагай Анастасия</div>
+      <div class="for">для Оли Соколовой</div>
+    </div>
+    <img class="avatar" src="screens/avatar.jpg" alt="Анастасия Гагай" width="200" height="200">
+  </div>
+
+  <section class="lav rv">
+    <h2><span class="em">👋</span>Что я предлагаю</h2>
+    <p>Оль, я проанализировала твои последние видео на ютубе и посты в телеграм за последний год и предлагаю решение, которое быстро реализовать. Оно сразу начнёт работать и приносить деньги.</p>
+  </section>
+
+  <section class="rv">
+    <h2><span class="em">🌀</span>Как это работает</h2>
+    <div class="funnel-name">Курс по зарплате в телеграм</div>
+
+    <div class="step"><span class="src">Фильм, еженедельное видео, ВК, ютуб, инста, шапка профиля</span></div>
+    <div class="arrow">▼</div>
+    <div class="step">Бесплатный курс по зарплате: 3 качественных урока</div>
+    <div class="arrow">▼</div>
+    <div class="step money">Оффер на «Сверхдоходы»<span class="tag">здесь приходят деньги</span></div>
+    <div class="branch">Внутри «Сверхдоходов» тоже ведём на подписку на дневник</div>
+    <div class="arrow">▼</div>
+    <div class="step">Догревающие сообщения с кейсами</div>
+    <div class="arrow">▼</div>
+    <div class="step">Оффер на дневник</div>
+
+    <details class="tasks">
+      <summary>📋 Задачи внутри проекта <span class="chev">▼</span></summary>
+      <ol>
+        <li>Подготовить курс «Сверхдоходы» к автопродажам.</li>
+        <li>Подготовить оффер и сделать посадочную страницу: фреймы на оплату, оферта, рассрочки.</li>
+        <li>Прописать воронку: ТЗ и тексты.</li>
+        <li>От Оли: снять видео или подсказать, откуда вырезать хорошие кусочки. Снять можно в тот же день, когда будут съёмки роликов на ютуб, плюс записать кружочки для воронки.</li>
+        <li>Технически реализовать воронку.</li>
+        <li>Сделать посадочную страницу для воронки.</li>
+        <li>Настроить дашборд с аналитикой. Если дадите доступы под НДА — скорее всего сделаю сама через вайбкодинг, если нет — напишу ТЗ, чтобы в моменте было удобно смотреть все важные показатели.</li>
+      </ol>
+    </details>
+
+    <div class="terms">
+      <div class="row"><span class="k">Срок</span><span>1 месяц, если оперативно получится записать видео</span></div>
+      <div class="row"><span class="k">Цена</span><span>180–300 тр за полноценную готовую работающую воронку</span></div>
+      <p style="margin:14px 0 0;font-size:15px;color:var(--muted)">Чтобы посчитать точнее, мне нужно понять:</p>
+      <ul>
+        <li>на каком варианте останавливаемся</li>
+        <li>какие будут задачи внутри проекта — я декомпозирую исходя из определённой цели</li>
+        <li>какие задачи будут на мне, а какие на команде</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="lav rv">
+    <h2><span class="em">💡</span>Почему именно эта механика</h2>
+    <div class="why-item">
+      <span class="ic">🌱</span>
+      <span class="t"><b>Это долгосрочный актив.</b> Один раз вложила силы, сделала хорошо — и дальше просто ведёшь людей в воронку. Многие воронки в профинансах работают с 2023 года, это 2,5 года с одной сборки.</span>
+    </div>
+    <div class="why-item">
+      <span class="ic">🤍</span>
+      <span class="t"><b>В блоге меньше продаж.</b> Больше ощущение пользы, меньше выгорания аудитории.</span>
+    </div>
+    <div class="why-item">
+      <span class="ic">🔐</span>
+      <span class="t"><b>Собираем людей в базу.</b> При блокировках площадок или если алгоритмы перестают рекомендовать — можно выйти к людям напрямую. Можно перевести их в нужный канал связи.</span>
+    </div>
+  </section>
+
+  <section class="rv">
+    <h2><span class="em">🎬</span>Примеры воронок и как на них ведут</h2>
+    <p class="lead">Оль, ты просила показать. Специально подобрала форматы, которые можно адаптировать под тебя.</p>
+    <div class="hint">Рядом с каждым лид-магнитом стоит тайминг — это момент, где в видео звучит нативный или прямой призыв забрать его.</div>
+
+    <h3>Из ютуба, интервью у других</h3>
+
+    <div class="ex">
+      <img class="shot" src="screens/1.jpg" alt="Кадр из интервью" loading="lazy" onerror="this.classList.add('missing')">
+      <a class="btn source" href="https://youtu.be/EbA9wDFfWIg?si=L9VWlCHoROBNtxmD" target="_blank" rel="noopener"><span class="ic">▶️</span>Смотреть интервью<span class="go">↗</span></a>
+      <a class="btn magnet" href="https://t.me/urok_deti_bot?start=dnednik_" target="_blank" rel="noopener"><span class="ic">🎁</span>Ежедневник будущего миллионера<span class="go">↗</span></a>
+      <span class="cue"><b>призыв на таймингах 51:44 и 1:19:02</b></span>
+      <a class="btn magnet" href="https://t.me/urok_deti_bot?start=karta" target="_blank" rel="noopener"><span class="ic">🎁</span>Бесплатный финансовый подкаст<span class="go">↗</span></a>
+      <span class="cue"><b>призыв на тайминге 44:23</b></span>
+    </div>
+
+    <div class="ex">
+      <img class="shot" src="screens/2.jpg" alt="Подарки в описании под интервью" loading="lazy" onerror="this.classList.add('missing')">
+      <a class="btn source" href="https://youtu.be/iGS1-CWCMY0?si=qQRn_Xh7YeRyYbwt" target="_blank" rel="noopener"><span class="ic">▶️</span>Смотреть интервью<span class="go">↗</span></a>
+      <blockquote>«Слушай, а давай мы подарочек подарим для наших подписчиков, если так можно. У меня есть несколько статей и уроков, они абсолютно бесплатные. Если вы совсем только начинающий человек в сфере финансов — вы можете пойти почитать их, посмотреть. Там статья о том, как я накопила 228 000 руб., откладывая всего лишь по 200 руб. в день. Что такое акции, облигации, как они работают — абсолютно классный материал. А я сейчас ещё коплю деньги для своих детей, каким образом я это делаю — можно пойти посмотреть. Я там даже ничего не продаю.»</blockquote>
+      <span class="cue"><b>прямой призыв на подарки, тайминг 1:09:00</b></span>
+      <a class="btn magnet" href="https://telegram.me/pro_sdelki_bot?start=tg1" target="_blank" rel="noopener"><span class="ic">🎁</span>Как копить, откладывая по 200 р в день<span class="go">↗</span></a>
+      <a class="btn magnet" href="https://telegram.me/shkola_start_invest_bot?start=akcii" target="_blank" rel="noopener"><span class="ic">🎁</span>Как работать с акциями<span class="go">↗</span></a>
+      <a class="btn magnet" href="https://telegram.me/shkola_start_invest_bot?start=obl" target="_blank" rel="noopener"><span class="ic">🎁</span>Как работать с облигациями<span class="go">↗</span></a>
+      <a class="btn magnet" href="https://telegram.me/shkola_start_invest_bot?start=tg2" target="_blank" rel="noopener"><span class="ic">🎁</span>Как Оля копит деньги своим детям<span class="go">↗</span></a>
+    </div>
+
+    <div class="ex">
+      <img class="shot" src="screens/3.jpg" alt="Кадр из интервью" loading="lazy" onerror="this.classList.add('missing')">
+      <a class="btn source" href="https://youtu.be/VLBCDwRLN2Q?si=sE_7MIx8f7rnrRK0" target="_blank" rel="noopener"><span class="ic">▶️</span>Смотреть интервью<span class="go">↗</span></a>
+      <a class="btn magnet" href="https://t.me/pro_sdelki_bot?start=pref_ipoteka_yb" target="_blank" rel="noopener"><span class="ic">🎁</span>Статья «Экономим миллионы на жилье»<span class="go">↗</span></a>
+      <a class="btn magnet" href="https://investmafk.ru/dolgovaya_razgruzka_web?utm_source=ad&utm_medium=stein&utm_campaign=youtube" target="_blank" rel="noopener"><span class="ic">🎁</span>Марафон «Долговая разгрузка»<span class="go">↗</span></a>
+      <a class="btn magnet" href="https://t.me/profinansy_7sposobovbot?start=vhod_stein" target="_blank" rel="noopener"><span class="ic">🎁</span>Марафон «7 способов вкладывать деньги»<span class="go">↗</span></a>
+      <span class="cue"><b>призыв на тайминге 1:07:23–1:07:49</b></span>
+      <a class="btn magnet" href="https://telegram.me/biblioteka_investora_bot?start=file_77__stein" target="_blank" rel="noopener"><span class="ic">🎁</span>Конспект книги «Мозг и деньги»<span class="go">↗</span></a>
+      <span class="cue"><b>призыв на тайминге 1:07:11</b></span>
+    </div>
+
+    <h3>Из ютуба, собственные видео</h3>
+
+    <div class="ex">
+      <img class="shot" src="screens/4.jpg" alt="Кадр из собственного видео" loading="lazy" onerror="this.classList.add('missing')">
+      <a class="btn source" href="https://youtu.be/6vcU0ApUL4k?si=WjEokKr87dIPqIRa" target="_blank" rel="noopener"><span class="ic">▶️</span>Смотреть видео<span class="go">↗</span></a>
+      <blockquote>«...если вам интересно как это делать, то инструкцию я вам под видео размещаю, пожалуйста, забирайте.»</blockquote>
+      <a class="btn magnet" href="https://telegram.me/biblioteka_investora_bot?start=file_35" target="_blank" rel="noopener"><span class="ic">🎁</span>Инструкция по зарубежным счетам<span class="go">↗</span></a>
+      <span class="cue"><b>призыв на тайминге 9:51</b></span>
+      <blockquote>«...можно настроить себе автопополнение, инструкцию каким образом я делала автопополнение в инвестициях можете найти под этим видео.»</blockquote>
+      <a class="btn magnet" href="https://telegram.me/pro_sdelki_bot?start=tg1_youtube" target="_blank" rel="noopener"><span class="ic">🎁</span>Инструкция по автопополнению в инвестициях<span class="go">↗</span></a>
+      <span class="cue"><b>призыв на тайминге 33:10</b></span>
+      <blockquote>«Подписывайтесь обязательно на мой официальный телеграм-канал, там я выкладываю свои прогнозы, свои мысли о том, что будет происходить с долларом в том числе дальше.»</blockquote>
+      <span class="cue"><b>перевод в телеграм-канал, тайминг 37:38–37:47</b></span>
+    </div>
+
+    <h3>Из телеграм-канала</h3>
+
+    <div class="ex">
+      <img class="shot" src="screens/5.jpg" alt="Пост в канале с призывом в воронку" loading="lazy" onerror="this.classList.add('missing')">
+      <a class="btn source" href="https://t.me/profinansy/13873" target="_blank" rel="noopener"><span class="ic">💬</span>Пост: на детский еженедельник<span class="go">↗</span></a>
+      <a class="btn source" href="https://t.me/profinansy/17105" target="_blank" rel="noopener"><span class="ic">💬</span>Пост: на взрослый еженедельник + курс<span class="go">↗</span></a>
+      <a class="btn source" href="https://t.me/profinansy/15463" target="_blank" rel="noopener"><span class="ic">💬</span>Пост: финансовый гороскоп<span class="go">↗</span></a>
+      <a class="btn source" href="https://t.me/profinansy/15351" target="_blank" rel="noopener"><span class="ic">💬</span>Пост: вебинарная воронка «7 способов»<span class="go">↗</span></a>
+    </div>
+  </section>
+
+  <section class="lav rv">
+    <h2><span class="em">🧩</span>Какие форматы совместной работы ещё я вижу</h2>
+
+    <div class="fmt pick">
+      <div class="badge">с этого предлагаю начать</div>
+      <h3>Воронка в телеграм</h3>
+      <p>Требует меньше всего трудозатрат от тебя, и её же можно сразу адаптировать под email. Это то предложение, которое выше.</p>
+      <a class="btn magnet" href="https://t.me/profinansy/17105" target="_blank" rel="noopener"><span class="ic">👀</span>Посмотреть пример: еженедельник + курс<span class="go">↗</span></a>
+    </div>
+
+    <div class="fmt">
+      <h3>📧 Email-воронка</h3>
+      <p>У взрослой платёжеспособной аудитории хорошая открываемость, регистрации и продажи. Человек сам даёт добро получать письма, привыкает их открывать, прогревается и покупает. Позже его можно перевести в другие каналы связи.</p>
+      <p>💌 Инвестиции на салфетках. Эта рассылка показывает, на что способны инвестиции. Вы будете приятно удивлены и захочется действовать. Как действовать там тоже есть.</p>
+      <a class="btn magnet" href="https://profinansy.net/salfetki?utm_source=tg&utm_medium=olga_gogaladze" target="_blank" rel="noopener"><span class="ic">🎁</span>Инвестиции на салфетках<span class="go">↗</span></a>
+      <p style="margin-top:14px">💌 Волшебный мир финансов. Тут есть и о кредитах, и о инвестициях, и о том как копить, и как считать деньги.</p>
+      <a class="btn magnet" href="https://profinansy.net/magicfinanse?utm_source=tg&utm_medium=olga_gogaladze" target="_blank" rel="noopener"><span class="ic">🎁</span>Волшебный мир финансов<span class="go">↗</span></a>
+      <p style="margin-top:14px">💌 Читательский билет в библиотеку инвестора. Когда мы выпускаем новые файлы в библиотеке инвестора, они попадают к вам автоматически. Это больше 10 полезных файлов в месяц.</p>
+      <p style="margin-top:14px">Пример, как Оля звала на эти рассылки:</p>
+      <img class="shot" src="screens/6.jpg" alt="Пост с приглашением на рассылки" loading="lazy" onerror="this.classList.add('missing')">
+    </div>
+
+    <div class="fmt">
+      <h3>🎥 Вебинарная автоворонка</h3>
+      <p>Делаем как обычный запуск, провожу его вместе с тобой, потом оформляю в автоворонку. Дальше её можно встраивать в другие воронки и вести на неё в том числе с рекламы.</p>
+      <a class="btn magnet" href="https://investmafk.ru/dolgovaya_razgruzka_web?utm_source=ad&utm_medium=stein&utm_campaign=youtube" target="_blank" rel="noopener"><span class="ic">🎁</span>Марафон «Долговая разгрузка»<span class="go">↗</span></a>
+      <a class="btn magnet" href="https://t.me/profinansy_7sposobovbot?start=vhod_stein" target="_blank" rel="noopener"><span class="ic">🎁</span>Марафон «7 способов вкладывать деньги»<span class="go">↗</span></a>
+    </div>
+
+    <div class="fmt">
+      <h3>📊 База и аналитика</h3>
+      <p>Чтобы принимать быстрые и качественные решения на цифрах, а не на ощущениях.</p>
+      <p>Всё сразу брать не нужно, можно делать по очереди.</p>
+    </div>
+  </section>
+
+  <div class="final rv">
+    <p>Предлагаю начать с воронки в телеграм. Потому что она требует меньше всего времени от тебя, собирается из того, что уже снято, и её же потом можно адаптировать под email без переделки.</p>
+    <p class="q">Напиши, как тебе?</p>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.rv');
+  if(reduce || !('IntersectionObserver' in window)){
+    items.forEach(function(el){ el.classList.add('on'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+  items.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Коммерческое предложение для Vasilich — Анастасия Гагай</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0D0C0A;
+  --surface:#171512;
+  --surface2:#1F1C17;
+  --line:#2C2820;
+  --orange:#FF6B1A;
+  --orange-deep:#E5560A;
+  --text:#F5F2ED;
+  --muted:#A39C90;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{
+  background:var(--ink);color:var(--text);
+  font-family:"Golos Text",-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:15px;line-height:1.4;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:720px;margin:0 auto;padding:0 18px}
+h1,h2,h3,.disp{font-family:"Unbounded","Golos Text",sans-serif;line-height:1.14;letter-spacing:-.01em}
+a{color:var(--orange)}
+b,strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:4px}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(13,12,10,.93);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.hbar{display:flex;align-items:center;gap:10px;padding:10px 18px;max-width:720px;margin:0 auto}
+.hmark{width:10px;height:10px;background:var(--orange);flex:none;transform:rotate(45deg)}
+.hname{font-family:"Unbounded";font-size:12px;font-weight:700;letter-spacing:.02em;line-height:1.2}
+.hfor{font-size:12px;color:var(--muted);line-height:1.3}
+@media(min-width:480px){.hname{font-size:13px}.hfor{font-size:13px}}
+
+/* ---------- hero ---------- */
+.hero{padding:36px 0 30px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+.hero h1{font-size:clamp(22px,5.6vw,34px);font-weight:700;max-width:22ch}
+.hero h1 span{color:var(--orange)}
+.hero .lede{margin-top:12px;color:var(--muted);max-width:56ch;font-size:15px}
+.assets{margin-top:20px;display:grid;gap:8px}
+@media(min-width:600px){.assets{grid-template-columns:repeat(3,1fr)}}
+.asset{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.asset .at{font-weight:600;font-size:13.5px}
+.asset .ad{font-size:12.5px;color:var(--muted);margin-top:2px;line-height:1.35}
+.assets-head{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:20px 0 8px}
+.tag-have{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8FBF7F;border:1px solid rgba(143,191,127,.35);border-radius:99px;padding:2px 8px;margin-bottom:8px}
+.tag-have::before{content:"✓"}
+.gapcard{margin-top:10px;border:1px solid var(--orange);border-radius:12px;background:rgba(255,107,26,.07);padding:13px 14px;display:flex;gap:10px;align-items:flex-start}
+.gapcard .gi{color:var(--orange);font-family:"Unbounded";font-weight:700;font-size:13px;line-height:1.3}
+.gapcard p{font-size:13.5px;color:#D8D3CB;line-height:1.4}
+.gapcard a{font-weight:600}
+
+/* ---------- sections ---------- */
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(19px,4.8vw,25px);font-weight:700;margin-bottom:6px}
+.sub{color:var(--muted);margin-bottom:18px;max-width:62ch;font-size:14px}
+
+/* zone split */
+.zone{display:grid;gap:10px}
+@media(min-width:600px){.zone{grid-template-columns:1fr 1fr}}
+.zcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.zcard.me{border-color:var(--orange)}
+.zcard h3{font-size:13.5px;margin-bottom:10px}
+.zcard.me h3{color:var(--orange)}
+.zcard ul{list-style:none;display:grid;gap:5px;font-size:13.5px;color:#D8D3CB;line-height:1.35}
+.zcard li{padding-left:14px;position:relative}
+.zcard li::before{content:"—";position:absolute;left:0;color:var(--orange)}
+.zcard.you li::before{color:var(--muted)}
+
+/* rate */
+.rate{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.rate .big{font-family:"Unbounded";font-size:22px;font-weight:700;color:var(--orange);white-space:nowrap}
+.rate p{font-size:13.5px;color:var(--muted);flex:1;min-width:220px;line-height:1.4}
+
+/* ---------- format cards ---------- */
+.fcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px;margin-bottom:12px}
+.fcard.hot{border-color:var(--orange)}
+.ftag{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.fcard.hot .ftag{color:var(--orange)}
+.fcard h3{font-size:17px;font-weight:700}
+.fprice{margin-top:10px}
+.fprice .was{font-size:14px;color:var(--muted);text-decoration:line-through;line-height:1.35}
+.fprice .wlabel{font-size:11px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;display:block;color:#7d776c;margin-bottom:1px}
+.fprice .now{font-family:"Unbounded";font-size:21px;font-weight:700;color:var(--orange);margin-top:3px}
+.ffor{margin-top:10px;font-size:14px;color:#D8D3CB;line-height:1.42}
+.ffor b{color:var(--text)}
+.flist{list-style:none;display:grid;gap:4px;margin-top:8px;font-size:13.5px;color:#D8D3CB;line-height:1.35}
+.flist li{padding-left:18px;position:relative}
+.flist li::before{content:"▸";position:absolute;left:2px;color:var(--orange)}
+.fnote{margin-top:8px;font-size:12.5px;color:var(--muted);line-height:1.4}
+.fmeta{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.pill{font-size:12px;font-weight:500;border:1px solid var(--line);border-radius:99px;padding:4px 10px;color:var(--muted);white-space:nowrap}
+.pill.o{border-color:rgba(255,107,26,.5);color:var(--orange)}
+.gain{margin-top:12px;border-left:3px solid var(--orange);padding:1px 0 1px 12px;font-size:13.5px;color:#D8D3CB;line-height:1.45}
+.gain b{color:var(--orange)}
+details.smeta{margin-top:12px;border-top:1px dashed var(--line)}
+details.smeta summary{
+  cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;
+  padding:9px 0;font-size:13px;font-weight:600;color:var(--orange);user-select:none;
+}
+details.smeta summary::-webkit-details-marker{display:none}
+details.smeta summary::after{content:"+";font-family:"Unbounded";font-size:14px;margin-left:auto;transition:transform .2s}
+details.smeta[open] summary::after{transform:rotate(45deg)}
+.srow{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px dashed var(--line);font-size:13px;line-height:1.35}
+.srow span:first-child{color:#D8D3CB}
+.srow .sp{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
+.srow .sp s{color:#7d776c}
+.srow.total{border-top:1px solid var(--line)}
+.srow.total span{color:var(--text);font-weight:600}
+.srow.final span:first-child{color:var(--orange);font-weight:700}
+.srow.final .sp{color:var(--orange);font-weight:700;font-size:15px;font-family:"Unbounded";text-decoration:none}
+.snote{font-size:12.5px;color:var(--muted);padding:8px 0 2px;line-height:1.4}
+
+/* ---------- table ---------- */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:var(--radius)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:13px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;line-height:1.3}
+th{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);background:var(--surface)}
+td:first-child{white-space:normal;min-width:170px;color:#D8D3CB}
+td:last-child{color:var(--orange);font-weight:600}
+tr:last-child td{border-bottom:none}
+.thint{font-size:12px;color:var(--muted);margin-top:6px}
+
+/* ---------- why now ---------- */
+.now-grid{display:grid;gap:10px}
+.ncard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;font-size:13.5px;color:#D8D3CB;line-height:1.42}
+.ncard b{color:var(--text)}
+.ncard .k{font-family:"Unbounded";font-size:12px;font-weight:700;color:var(--orange);display:block;margin-bottom:6px}
+
+/* ---------- quiz ---------- */
+#quiz{background:linear-gradient(180deg,rgba(255,107,26,.06),transparent 240px)}
+.qprogress{height:4px;background:var(--line);border-radius:99px;margin:2px 0 18px;overflow:hidden}
+.qprogress i{display:block;height:100%;width:0;background:var(--orange);transition:width .25s}
+.qcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:10px}
+.qnum{font-family:"Unbounded";font-size:10.5px;font-weight:700;color:var(--orange);letter-spacing:.1em;margin-bottom:6px}
+.qcard h3{font-size:15px;margin-bottom:12px;font-family:"Golos Text";font-weight:600;line-height:1.35}
+.opts{display:grid;gap:8px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0}
+.opt label{
+  display:block;border:1px solid var(--line);border-radius:11px;padding:11px 12px;
+  font-size:13.5px;color:#D8D3CB;cursor:pointer;transition:border-color .15s,background .15s;line-height:1.35;
+}
+.opt label:active{transform:scale(.99)}
+.opt input:checked+label{border-color:var(--orange);background:rgba(255,107,26,.09);color:var(--text)}
+.opt input:focus-visible+label{outline:2px solid var(--orange);outline-offset:2px}
+.qbtn{
+  display:block;width:100%;border:none;border-radius:13px;cursor:pointer;
+  background:var(--orange);color:#140A02;font-family:"Unbounded";font-size:13.5px;font-weight:700;
+  padding:15px;margin-top:6px;transition:background .15s;
+}
+.qbtn:hover{background:var(--orange-deep)}
+.qbtn:disabled{background:var(--line);color:var(--muted);cursor:not-allowed}
+.qhint{text-align:center;font-size:12px;color:var(--muted);margin-top:8px;min-height:16px}
+
+/* ---------- result ---------- */
+#result{display:none;margin-top:28px}
+#result.show{display:block;animation:pop .4s ease}
+@keyframes pop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.rhead{text-align:center;margin-bottom:16px}
+.rhead .eyebrow{margin-bottom:6px}
+.rhead h3{font-size:clamp(18px,4.8vw,23px)}
+.rcard{
+  border:2px solid var(--orange);border-radius:18px;overflow:hidden;
+  background:var(--surface);box-shadow:0 24px 60px -30px rgba(255,107,26,.35);
+}
+.rband{background:var(--orange);color:#140A02;padding:8px 18px;font-family:"Unbounded";font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.rbody{padding:20px 16px}
+.rbody h4{font-family:"Unbounded";font-size:17px;line-height:1.25;margin-bottom:4px}
+.rprice{margin:12px 0 2px}
+.rprice .was{font-size:13.5px;color:var(--muted);text-decoration:line-through;display:block;line-height:1.35}
+.rprice .wlabel{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;display:block;color:#7d776c}
+.rprice .now{font-family:"Unbounded";font-size:27px;font-weight:700;color:var(--orange);display:block;margin-top:4px}
+.rwhy{font-size:14px;color:#D8D3CB;margin-top:8px;line-height:1.42}
+.rlist{list-style:none;display:grid;gap:7px;margin-top:14px;font-size:13.5px;color:#D8D3CB;line-height:1.4}
+.rlist li{padding-left:22px;position:relative}
+.rlist li::before{content:"✅";position:absolute;left:0;font-size:12px;top:1px}
+.rfacts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.rfact{background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:10px 12px}
+.rfact .l{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.rfact .v{font-size:13px;font-weight:600;margin-top:2px;line-height:1.3}
+.recon{margin-top:14px;border-left:3px solid var(--orange);padding:1px 0 1px 12px;font-size:13.5px;color:#D8D3CB;line-height:1.45}
+.rcta{display:block;text-align:center;text-decoration:none;background:var(--orange);color:#140A02;font-family:"Unbounded";font-size:13.5px;font-weight:700;border-radius:13px;padding:15px;margin-top:18px}
+.rcta:hover{background:var(--orange-deep)}
+.ralt{margin-top:12px;text-align:center;font-size:13px;color:var(--muted);line-height:1.45}
+.rreset{display:block;margin:14px auto 0;background:none;border:none;color:var(--muted);font-size:12.5px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- start ---------- */
+.steps{counter-reset:s;display:grid;gap:10px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px 14px 56px;position:relative;font-size:13.5px;color:#D8D3CB;line-height:1.42}
+.step::before{
+  counter-increment:s;content:counter(s);
+  position:absolute;left:15px;top:13px;width:26px;height:26px;border-radius:8px;
+  background:var(--orange);color:#140A02;font-family:"Unbounded";font-weight:700;font-size:12px;
+  display:flex;align-items:center;justify-content:center;
+}
+footer{padding:28px 0 50px;color:var(--muted);font-size:12.5px;text-align:center}
+footer b{color:var(--text)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hbar">
+    <div class="hmark" aria-hidden="true"></div>
+    <div>
+      <div class="hname">Анастасия Гагай</div>
+      <div class="hfor">Коммерческое предложение для Vasilich</div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">По итогам консультации · июль 2026</div>
+    <h1>Система, которая превращает охваты <span>в заявки на строительство</span></h1>
+    <p class="lede">У вас есть главное, что нельзя купить. Не хватает системы, которая доводит человека от рилса до договора. Этот блок я беру на себя.</p>
+    <div class="assets-head">Это у вас уже есть — ваша сильная база</div>
+    <div class="assets">
+      <div class="asset"><span class="tag-have">у вас есть</span><div class="at">Реальная экспертиза</div><div class="ad">Андрей и его техническое понимание стройки</div></div>
+      <div class="asset"><span class="tag-have">у вас есть</span><div class="at">Открытая смета</div><div class="ad">Честное конкурентное преимущество, которое редко кто дает</div></div>
+      <div class="asset"><span class="tag-have">у вас есть</span><div class="at">Средний чек ~10 млн</div><div class="ad">Клиенты приходили по сарафану — без трафика</div></div>
+    </div>
+    <div class="gapcard">
+      <div class="gi">→</div>
+      <p><b>Чего не хватает — беру на себя я:</b> система, которая соединяет эту базу с потоком заявок — воронки, конверторы, прогрев, сайт, аналитика. <a href="#formats">Форматы работы ниже ↓</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ZONE ============ -->
+<section>
+  <div class="wrap">
+    <h2>Кто за что отвечает</h2>
+    <p class="sub">Каждый делает то, в чем он силен, — и ничего не делается дважды.</p>
+    <div class="zone">
+      <div class="zcard me">
+        <h3>🛠️ Беру на себя</h3>
+        <ul>
+          <li>путь клиента и логику воронки</li>
+          <li>смыслы и офферы</li>
+          <li>конверторы: квизы, калькуляторы, лид-магниты</li>
+          <li>тексты бота, цепочек прогрева, сайта</li>
+          <li>структуру и упаковку сайта</li>
+          <li>логику сегментации базы</li>
+          <li>схему аналитики: что замеряем и как читаем</li>
+        </ul>
+      </div>
+      <div class="zcard you">
+        <h3>🤝 Остается на вашей стороне</h3>
+        <ul>
+          <li>съемка рилсов — ваш рилсмейкер по моей канве и смыслам</li>
+          <li>строительная экспертиза и продажи на встречах — Андрей и менеджер</li>
+          <li>техническая настройка бота — ваш специалист или мой подрядчик</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RATE ============ -->
+<section>
+  <div class="wrap">
+    <h2>Стоимость моего часа</h2>
+    <p class="sub">🧾 Под каждым форматом — открытая смета работ. Я за прозрачность так же, как вы — за открытую смету в стройке.</p>
+    <div class="rate">
+      <div class="big">10 000 ₽ / час</div>
+      <p>Все пакеты стоят в 2–4 раза дешевле суммы вложенных в них часов: мне выгоднее работать проектами с результатом, вам — платить за результат, а не за время.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMATS ============ -->
+<section id="formats">
+  <div class="wrap">
+    <h2>Форматы работы</h2>
+    <p class="sub">От точечной консультации до системы под ключ. Не знаете, что выбрать, — <a href="#quiz">пройдите тест ниже</a>, он займет минуту.</p>
+
+    <!-- F0: фундамент -->
+    <div class="fcard hot">
+      <div class="ftag">Фундамент · база для любого формата</div>
+      <h3>Расширенный маркетинговый план</h3>
+      <div class="fprice">
+        <div class="was"><span class="wlabel">Цена услуги на рынке</span>150 000–300 000 ₽ · 3–6 недель у агентства</div>
+        <div class="now">120 000 ₽</div>
+      </div>
+      <p class="ffor">В стройке никто не начинает со стен — начинают с фундамента. В маркетинге фундамент — это план. Что входит:</p>
+      <ul class="flist">
+        <li><b>Анализ конкурентов</b>, их офферов и путей продвижения — чтобы найти свое отличие и не повторять чужих ошибок</li>
+        <li><b>Исследование целевой аудитории</b> — чтобы говорить с клиентом на его языке и закрывать именно его боли</li>
+        <li><b>Коммуникационная стратегия</b> — чтобы все сообщения звучали последовательно и попадали в нужную аудиторию</li>
+        <li><b>Продуктовая линейка</b> — чтобы ассортимент логично вел клиента от первого касания к основной покупке</li>
+        <li><b>Гипотезы по продвижению и план их реализации</b> — чтобы тестировать каналы осознанно, а не сливать бюджет наугад</li>
+      </ul>
+      <p class="fnote">Можно ли без него? Да. Но это создаст больше суеты — а суета отражается в потерянных клиентах и времени. С планом все, что мы делаем дальше, будет быстрее и точнее. И вы узнаете много нового о своих клиентах.</p>
+      <div class="fmeta"><span class="pill o">📅 Срок: 2–3 недели</span><span class="pill">🙋 От вас: 2 созвона + доступ к записям и клиентам</span></div>
+      <div class="gain">🧱 <b>Экономит:</b> каждый формат ниже, собранный на этом фундаменте, попадает точнее с первого раза — меньше кругов правок, меньше слитых на догадки недель сезона. Это база для любого бизнеса: делается один раз, а работает во всех каналах — от рилсов до встреч.</div>
+      <details class="smeta"><summary>🧾 Открытая смета работ</summary>
+        <div class="srow"><span>Анализ конкурентов, офферов, путей продвижения</span><span class="sp">8–10 ч · <s>80–100 тыс.</s></span></div>
+        <div class="srow"><span>Исследование ЦА: интервью, язык, боли</span><span class="sp">10–12 ч · <s>100–120 тыс.</s></span></div>
+        <div class="srow"><span>Коммуникационная стратегия</span><span class="sp">6–8 ч · <s>60–80 тыс.</s></span></div>
+        <div class="srow"><span>Продуктовая линейка</span><span class="sp">4–6 ч · <s>40–60 тыс.</s></span></div>
+        <div class="srow"><span>Гипотезы по продвижению + план реализации</span><span class="sp">6–8 ч · <s>60–80 тыс.</s></span></div>
+        <div class="srow total"><span>Итого по часам</span><span class="sp">35–44 ч · <s>350–440 тыс. ₽</s></span></div>
+        <div class="srow final"><span>Ваша цена</span><span class="sp">120 000 ₽</span></div>
+        <div class="snote">При заказе вместе с форматом 6 или 7 «под ключ» — 90 000 ₽: часть исследований мы в любом случае делаем внутри этих форматов.</div>
+      </details>
+    </div>
+
+    <!-- F1 -->
+    <div class="fcard">
+      <div class="ftag">Формат 1</div>
+      <h3>Консультация «вопрос-ответ»</h3>
+      <div class="fprice">
+        <div class="was"><span class="wlabel">Цена с учетом почасовой работы</span>30 000–35 000 ₽</div>
+        <div class="now">20 000 ₽</div>
+      </div>
+      <p class="ffor">Разбираем ваш запрос. Подробно и на примерах отвечаю на вопросы. Результат: подробный конспект встречи.</p>
+      <ul class="flist">
+        <li>Вы заранее присылаете запрос и отвечаете на мой короткий бриф</li>
+        <li>Я готовлюсь по вашим материалам</li>
+        <li>Созвон 1,5–2 часа: конкретные решения и план действий</li>
+        <li>Подробный конспект встречи — вам в чат</li>
+      </ul>
+      <div class="fmeta"><span class="pill o">📅 Созвон через 1–2 дня</span><span class="pill">🙋 Ваше время: 2–3 часа</span></div>
+      <div class="gain">⏱️ <b>Экономит:</b> недели самостоятельного разбора и месяц движения команды в неверном направлении — в сезон он стоит заметно дороже 20 000 ₽, а сезон не возвращается.</div>
+      <details class="smeta"><summary>🧾 Открытая смета работ</summary>
+        <div class="srow"><span>Ваш запрос + мой бриф</span><span class="sp">—</span></div>
+        <div class="srow"><span>Моя подготовка по материалам</span><span class="sp">1,5–2 ч · <s>15–20 тыс.</s></span></div>
+        <div class="srow"><span>Созвон: решения и план + конспект</span><span class="sp">1,5–2 ч · <s>15–20 тыс.</s></span></div>
+        <div class="srow total"><span>Итого по часам</span><span class="sp">~3–3,5 ч · <s>30–35 тыс. ₽</s></span></div>
+        <div class="srow final"><span>Ваша цена</span><span class="sp">20 000 ₽</span></div>
+      </details>
+    </div>
+
+    <!-- F2 -->
+    <div class="fcard">
+      <div class="ftag">Формат 2</div>
+      <h3>Консультация с готовым результатом</h3>
+      <div class="fprice">
+        <div class="was"><span class="wlabel">Цена с учетом почасовой работы</span>90 000–100 000 ₽</div>
+        <div class="now">25 000 ₽</div>
+      </div>
+      <p class="ffor">Пример — доработка сайта-конвертера. Вы получаете <b>готовый документ</b>, по которому команда идет внедрять. Что входит:</p>
+      <ul class="flist">
+        <li>Изучаю ваш сайт и присылаю список вопросов (можно ответить голосовыми)</li>
+        <li>Файл: структура сайта — какие блоки, в каком порядке и почему</li>
+        <li>Ключевые формулировки и офферы</li>
+        <li>Триггеры: таймеры, счетчики записавшихся, плашки</li>
+        <li>Кнопки: какие, где стоят и куда ведут</li>
+        <li>Созвон-презентация файла + ответы на все вопросы</li>
+        <li>Обратная связь по наполнению и финальные правки готового сайта</li>
+        <li>Чат поддержки на весь период внедрения — до 3 недель</li>
+      </ul>
+      <div class="fmeta"><span class="pill o">📅 Файл через 3–4 дня</span><span class="pill">⏱️ Готовый сайт: 2–3 недели</span></div>
+      <div class="gain">💰 <b>Экономит:</b> собственнику 8–10 часов проработки, команде — недели переделок «вслепую». Каждый новый клиент не из сарафана проверяет сайт. Если сайт отпугнет хотя бы 1 клиента — компания теряет 10 000 000 рублей. Слишком большая цена ошибки.</div>
+      <details class="smeta"><summary>🧾 Открытая смета работ</summary>
+        <div class="srow"><span>Изучение сайта + список вопросов</span><span class="sp">1,5 ч · <s>15 тыс.</s></span></div>
+        <div class="srow"><span>Разработка файла со структурой</span><span class="sp">3–4 ч · <s>30–40 тыс.</s></span></div>
+        <div class="srow"><span>Созвон-презентация файла</span><span class="sp">1,5 ч · <s>15 тыс.</s></span></div>
+        <div class="srow"><span>Обратная связь и финальные правки</span><span class="sp">2–3 ч · <s>20–30 тыс.</s></span></div>
+        <div class="srow"><span>Чат поддержки при внедрении</span><span class="sp">до 3 нед. · вкл.</span></div>
+        <div class="srow total"><span>Итого по часам</span><span class="sp">9–10 ч · <s>90–100 тыс. ₽</s></span></div>
+        <div class="srow final"><span>Ваша цена</span><span class="sp">25 000 ₽</span></div>
+      </details>
+    </div>
+
+    <!-- F3 -->
+    <div class="fcard">
+      <div class="ftag">Формат 3</div>
+      <h3>Сайт-конвертер под ключ</h3>
+      <div class="fprice">
+        <div class="was"><span class="wlabel">Цена услуги на рынке</span>120 000–500 000 ₽ · 3–6 недель</div>
+        <div class="now">100 000 ₽</div>
+      </div>
+      <p class="ffor">Готовый HTML сайта. С прописанными текстами и грамотной маркетинговой структурой. Что входит:</p>
+      <ul class="flist">
+        <li>Маркетинговая проработка: смыслы, офферы, структура доверия (кейсы, видеоотзывы, лицензии — все, что снимает страх «шарашкиной конторы»)</li>
+        <li>Тексты всех блоков без «воды»</li>
+        <li>Готовый HTML</li>
+        <li>Базовая аналитика: Метрика, цели, заявки сразу в ваш Telegram</li>
+        <li>2 круга правок</li>
+      </ul>
+      <div class="fmeta"><span class="pill o">📅 Срок: 2–3 недели</span><span class="pill">🙋 От вас: созвон 1,5 ч + материалы</span></div>
+      <div class="gain">💰 <b>Экономит:</b> 30–35 часов работы и координацию подрядчиков, по деньгам — от 20 до 400 тысяч против рынка, по срокам — 1–3 недели. Сайт работает на все каналы сразу: каждый, кто гуглит вас перед сделкой, попадает на страницу, которая продает, а не отговаривает.</div>
+      <details class="smeta"><summary>🧾 Открытая смета работ</summary>
+        <div class="srow"><span>Смыслы, офферы, структура доверия</span><span class="sp">8–10 ч · <s>80–100 тыс.</s></span></div>
+        <div class="srow"><span>Тексты всех блоков</span><span class="sp">10–12 ч · <s>100–120 тыс.</s></span></div>
+        <div class="srow"><span>Верстка HTML (до 10 блоков)</span><span class="sp">8–9 ч · <s>80–90 тыс.</s></span></div>
+        <div class="srow"><span>Аналитика + заявки в Telegram</span><span class="sp">3–4 ч · <s>30–40 тыс.</s></span></div>
+        <div class="srow total"><span>Итого по часам</span><span class="sp">30–35 ч · <s>300–350 тыс. ₽</s></span></div>
+        <div class="srow final"><span>Ваша цена</span><span class="sp">100 000 ₽</span></div>
+        <div class="snote">Это не «дизайнер собрал красиво» — это маркетолог разработал смыслы под ваши типы клиентов и их возражения.</div>
+      </details>
+    </div>
+
+    <!-- F4 -->
+    <div class="fcard">
+      <div class="ftag">Формат 4</div>
+      <h3>Консультация по воронке</h3>
+      <div class="fprice">
+        <div class="was"><span class="wlabel">Цена с учетом почасовой работы</span>100 000–120 000 ₽</div>
+        <div class="now">50 000 ₽</div>
+      </div>
+      <p class="ffor">Полная схема воронки «соцсети → заявка», внедряете своими силами. Что входит:</p>
+      <ul class="flist">
+        <li>Определяем наиболее целевой тип клиента</li>
+        <li>Смыслы для 5–10 рилсов-конверторов</li>
+        <li>Путь клиента: что, куда, какие фразы пишем, как и где настраиваем</li>
+        <li>Конвертор (лид-магнит): продающая структура и смыслы содержания</li>
+        <li>Как работать с этим клиентом дальше</li>
+        <li>Как и из каких точек снимать аналитику</li>
+        <li>Рекомендации по технической настройке</li>
+        <li>Чат на вопросы при внедрении — 3 недели</li>
+      </ul>
+      <div class="fmeta"><span class="pill o">📅 Моя часть: 1 неделя</span><span class="pill">📊 Данные: через 3–4 нед. после запуска</span></div>
+      <div class="gain">⏱️ <b>Экономит:</b> 3–6 месяцев проб и ошибок при вашем участии всего 4–5 часов. Сейчас человек из соцсетей, не готовый купить сегодня, теряется безвозвратно. Воронка начинает собирать базу — включая тех, кто строит в следующем году: клиентов сезона-2027, которых конкуренты еще не касаются.</div>
+      <details class="smeta"><summary>🧾 Открытая смета работ</summary>
+        <div class="srow"><span>Бриф, анализ ниши и ответов</span><span class="sp">2–3 ч · <s>20–30 тыс.</s></span></div>
+        <div class="srow"><span>Разработка схемы воронки</span><span class="sp">5–6 ч · <s>50–60 тыс.</s></span></div>
+        <div class="srow"><span>Созвон-презентация</span><span class="sp">1,5–2 ч · <s>15–20 тыс.</s></span></div>
+        <div class="srow"><span>Чат при внедрении</span><span class="sp">3 нед. · вкл.</span></div>
+        <div class="srow total"><span>Итого по часам</span><span class="sp">10–12 ч · <s>100–120 тыс. ₽</s></span></div>
+        <div class="srow final"><span>Ваша цена</span><span class="sp">50 000 ₽</span></div>
+      </details>
+    </div>
+
+    <!-- F5 -->
+    <div class="fcard hot">
+      <div class="ftag">Формат 5</div>
+      <h3>Воронка: подробное ТЗ + все тексты + лид-магнит</h3>
+      <div class="fprice">
+        <div class="was"><span class="wlabel">Цена услуги на рынке</span>120 000–200 000 ₽+ · 1–2 месяца работы агентства</div>
+        <div class="now">150 000 ₽</div>
+      </div>
+      <p class="ffor">Команда получает не схему, а полный <b>«конструктор»: бери и собирай</b>. Все из формата 4, плюс:</p>
+      <ul class="flist">
+        <li>Упаковка смысла и оффера</li>
+        <li>ТЗ на создание рилсов-конверторов</li>
+        <li>Лид-магнит: структура и текст под вашего клиента</li>
+        <li>Все тексты для бота и кнопок</li>
+        <li>Логика сегментации базы</li>
+        <li>Сценарии дальнейшего прогрева по разным типам лидов</li>
+        <li>Подробное ТЗ на техническую настройку и схема аналитики</li>
+      </ul>
+      <p class="fnote">Сценарии рилсов — ваш специалист по моей канве; технастройка бота — ваш спец или мой подрядчик отдельным бюджетом. Все тексты и логика — на мне и моей команде.</p>
+      <div class="fmeta"><span class="pill o">📅 Моя часть: 2–3 недели</span><span class="pill">🚀 Рабочая воронка: 1,5–2 мес.</span></div>
+      <div class="gain">💰 <b>Экономит:</b> команде 30–40 часов, а вам — месяцы тестов: ошибка в логике воронки видна только через 1–2 месяца после запуска, а сезон один. Один договор со средним чеком ~10 млн — и воронка стоила 1,5% от него. База и цепочки — актив, который работает и после сезона.</div>
+      <details class="smeta"><summary>🧾 Открытая смета работ</summary>
+        <div class="srow"><span>Все из формата 4</span><span class="sp">10–12 ч · <s>100–120 тыс.</s></span></div>
+        <div class="srow"><span>Лид-магнит: структура и текст</span><span class="sp">6–8 ч · <s>60–80 тыс.</s></span></div>
+        <div class="srow"><span>Тексты бота, кнопок, цепочек прогрева</span><span class="sp">12–14 ч · <s>120–140 тыс.</s></span></div>
+        <div class="srow"><span>Сегментация, ТЗ на настройку, аналитика</span><span class="sp">6–8 ч · <s>60–80 тыс.</s></span></div>
+        <div class="srow total"><span>Итого по часам</span><span class="sp">35–40 ч · <s>350–400 тыс. ₽</s></span></div>
+        <div class="srow final"><span>Ваша цена</span><span class="sp">150 000 ₽</span></div>
+      </details>
+    </div>
+
+    <!-- F6 -->
+    <div class="fcard hot">
+      <div class="ftag">Формат 6 · цена при старте в июле</div>
+      <h3>Воронка под ключ</h3>
+      <div class="fprice">
+        <div class="was"><span class="wlabel">Цена услуги на рынке</span>230 000–250 000 ₽ · с координацией 3 подрядчиков</div>
+        <div class="now">200 000 ₽</div>
+      </div>
+      <p class="ffor">То же, что формат 5, но <b>вы не тратите на это время вообще</b> — кроме своей экспертизы в стройке. Дополнительно беру на себя:</p>
+      <ul class="flist">
+        <li>Создание лид-магнита любой сложности: квиз, калькулятор, чек-лист, видео-упаковка</li>
+        <li>Техническую настройку бота</li>
+        <li>Настройку аналитики</li>
+        <li>Тест и докрутку по первым данным после запуска</li>
+      </ul>
+      <p class="fnote">От вас — созвон по смыслам и съемка рилсов по моей канве.</p>
+      <div class="fmeta"><span class="pill o">🚀 Запуск: 3–4 недели</span><span class="pill">🙋 Ваше участие: 1,5–2 часа</span></div>
+      <div class="gain">⏱️ <b>Экономит:</b> 100% времени команды, кроме съемки рилсов. Не нужно координировать трех исполнителей — нет «сломанного телефона» между смыслами и настройкой, на котором теряется конверсия. Запуск на 2–3 недели раньше — в разгар сезона это недели входящих заявок, которые иначе не случатся.</div>
+      <details class="smeta"><summary>🧾 Открытая смета работ</summary>
+        <div class="srow"><span>Все из формата 5</span><span class="sp">35–40 ч · <s>350–400 тыс.</s></span></div>
+        <div class="srow"><span>Производство лид-магнита</span><span class="sp">6–8 ч · <s>60–80 тыс.</s></span></div>
+        <div class="srow"><span>Техническая настройка бота</span><span class="sp">5–7 ч · <s>50–70 тыс.</s></span></div>
+        <div class="srow"><span>Аналитика + тест и докрутка</span><span class="sp">4–5 ч · <s>40–50 тыс.</s></span></div>
+        <div class="srow total"><span>Итого по часам</span><span class="sp">50–60 ч · <s>500–600 тыс. ₽</s></span></div>
+        <div class="srow final"><span>Ваша цена</span><span class="sp">200 000 ₽</span></div>
+      </details>
+    </div>
+
+    <!-- F7 -->
+    <div class="fcard hot">
+      <div class="ftag">Формат 7</div>
+      <h3>Весь путь клиента: от охвата до лида</h3>
+      <div class="fprice">
+        <div class="was"><span class="wlabel">Цена услуги на рынке</span>370 000–700 000 ₽ · 2–3 месяца с несколькими подрядчиками</div>
+        <div class="now">ТЗ — 180 000 ₽ · Под ключ — 350 000 ₽</div>
+      </div>
+      <p class="ffor">Вся система целиком — от первого касания в соцсетях до лида с контактами и планом прогрева наименее теплых. Что входит:</p>
+      <ul class="flist">
+        <li>Лендинг (сайт-конвертер) с маркетинговой проработкой — уже на 2-й неделе</li>
+        <li>Воронка с конверторами: лид-магниты, бот, цепочки</li>
+        <li>Сегментация базы и сценарии прогрева для «холодных» и «отложенных» клиентов</li>
+        <li>Сквозная аналитика: смыслы, фразы и настройка — от маркетолога, а не от технаря</li>
+      </ul>
+      <p class="fnote"><b>Как ТЗ — 180 000 ₽:</b> все документы, структуры и тексты от меня, собирает ваша команда за 3–4 недели. <b>Под ключ — 350 000 ₽:</b> сборку, настройку и аналитику беру на себя.</p>
+      <div class="fmeta"><span class="pill o">🚀 Лендинг: на 2-й неделе</span><span class="pill">📊 Первые лиды и данные: 6–8 нед.</span></div>
+      <div class="gain">💰 <b>Экономит:</b> наем маркетолога в штат — поиск 1–2 месяца плюс 70–120 тыс./мес без гарантии системного взгляда. 350 000 ₽ — это 3,5% одного среднего чека, и система остается вашей навсегда: база копится, цепочки работают в следующие сезоны, аналитика показывает в цифрах, где теряются люди.</div>
+      <details class="smeta"><summary>🧾 Открытая смета работ</summary>
+        <div class="srow"><span>Лендинг с маркетинговой проработкой</span><span class="sp">30–35 ч · <s>300–350 тыс.</s></span></div>
+        <div class="srow"><span>Воронка: логика, тексты, лид-магниты</span><span class="sp">35–40 ч · <s>350–400 тыс.</s></span></div>
+        <div class="srow"><span>Сборка, настройка, сквозная аналитика</span><span class="sp">20–25 ч · <s>200–250 тыс.</s></span></div>
+        <div class="srow total"><span>Итого по часам, под ключ</span><span class="sp">85–100 ч · <s>850 тыс.–1 млн ₽</s></span></div>
+        <div class="srow final"><span>Ваша цена под ключ</span><span class="sp">350 000 ₽</span></div>
+        <div class="snote">Вариант «как ТЗ»: 55–65 ч моей работы (по часам — <s>550–650 тыс. ₽</s>) → ваша цена 180 000 ₽. Внедрение вашей командой 3–4 недели.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TABLE ============ -->
+<section>
+  <div class="wrap">
+    <h2>Все форматы в одной таблице</h2>
+    <div class="tscroll">
+      <table>
+        <thead><tr><th>Формат</th><th>Моя работа</th><th>Срок до результата</th><th>Цена на рынке</th><th>Моя цена</th></tr></thead>
+        <tbody>
+          <tr><td>⭐ Фундамент: маркетинговый план</td><td>35–44 ч</td><td>2–3 недели</td><td>150–300 тыс.</td><td>120 000 ₽</td></tr>
+          <tr><td>1. Консультация «вопрос-ответ»</td><td>3–3,5 ч</td><td>2–3 дня</td><td>30–35 тыс.</td><td>20 000 ₽</td></tr>
+          <tr><td>2. Консультация с результатом</td><td>9–10 ч</td><td>2–3 недели</td><td>90–100 тыс.</td><td>25 000 ₽</td></tr>
+          <tr><td>3. Сайт под ключ</td><td>30–35 ч</td><td>2–3 недели</td><td>120–500 тыс.</td><td>100 000 ₽</td></tr>
+          <tr><td>4. Консультация по воронке</td><td>10–12 ч</td><td>1 нед. + внедрение</td><td>100–120 тыс.</td><td>50 000 ₽</td></tr>
+          <tr><td>5. Воронка: ТЗ + тексты + лид-магнит</td><td>35–40 ч</td><td>1,5–2 мес.</td><td>120–200 тыс.+</td><td>150 000 ₽</td></tr>
+          <tr><td>6. Воронка под ключ</td><td>50–60 ч</td><td>4–6 недель</td><td>230–250 тыс.</td><td>200 000 ₽</td></tr>
+          <tr><td>7. Весь путь: ТЗ / под ключ</td><td>55–65 / 85–100 ч</td><td>4–8 недель</td><td>370–700 тыс.</td><td>180 / 350 тыс. ₽</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="thint">← Таблицу можно листать вбок</p>
+  </div>
+</section>
+
+<!-- ============ WHY NOW ============ -->
+<section>
+  <div class="wrap">
+    <h2>Почему начинать <span style="color:var(--orange)">сейчас</span></h2>
+    <div class="now-grid">
+      <div class="ncard"><span class="k">🗓️ Загрузка</span>Сейчас я веду воронки <b>Skyeng</b> — это моя основная загрузка, поэтому параллельно я полноценно веду максимум 2–3 клиентов. В июле планирую взять клиента на полную загрузку — <b>один слот сейчас открыт</b>, и о совместной работе уже думает еще один заказчик.</div>
+      <div class="ncard"><span class="k">🎯 Качество</span>Все, что я делаю, я делаю очень качественно и скрупулезно. Поэтому больше 2–3 проектов в ведении не беру принципиально: иначе не смогу уделять каждому все свое внимание, а работать вполсилы я не умею.</div>
+      <div class="ncard"><span class="k">☀️ Сезон</span><b>Сейчас строительный сезон.</b> Воронка, запущенная в июле, начнет приносить данные и лидов еще в сезон.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section id="quiz">
+  <div class="wrap">
+    <div class="eyebrow">🧭 Тест · 1 минута</div>
+    <h2>Какой формат подходит вам прямо сейчас</h2>
+    <p class="sub">6 вопросов из того, что я услышала на нашем созвоне. Отвечайте честно — результат покажет формат под вашу ситуацию.</p>
+    <div class="qprogress"><i id="qbar"></i></div>
+    <form id="qform">
+
+      <div class="qcard"><div class="qnum">Вопрос 1 / 6</div>
+        <h3>Что происходит с человеком, который увидел ваш рилс, но пока не готов покупать?</h3>
+        <div class="opts">
+          <div class="opt"><input type="radio" id="q1a" name="q1" value="a"><label for="q1a">Мы получаем его контакт и знаем, что с ним делать дальше</label></div>
+          <div class="opt"><input type="radio" id="q1b" name="q1" value="b"><label for="q1b">Ничего — посмотрел и ушел, мы его теряем навсегда</label></div>
+          <div class="opt"><input type="radio" id="q1c" name="q1" value="c"><label for="q1c">Мы даже не знаем, сколько таких людей и где они отваливаются</label></div>
+        </div>
+      </div>
+
+      <div class="qcard"><div class="qnum">Вопрос 2 / 6</div>
+        <h3>Кто в команде сядет и напишет тексты бота, цепочки прогрева и лид-магнит?</h3>
+        <div class="opts">
+          <div class="opt"><input type="radio" id="q2a" name="q2" value="a"><label for="q2a">Есть человек — ему нужны только структура и план</label></div>
+          <div class="opt"><input type="radio" id="q2b" name="q2" value="b"><label for="q2b">Только я или партнер, а времени на это физически нет</label></div>
+          <div class="opt"><input type="radio" id="q2c" name="q2" value="c"><label for="q2c">Никто — и параллельно еще сайт не готов принимать этих людей</label></div>
+        </div>
+      </div>
+
+      <div class="qcard"><div class="qnum">Вопрос 3 / 6</div>
+        <h3>Сколько лидов принесли соцсети за последние месяцы?</h3>
+        <div class="opts">
+          <div class="opt"><input type="radio" id="q3a" name="q3" value="a"><label for="q3a">Первые есть, но мало и хаотично — нет системы</label></div>
+          <div class="opt"><input type="radio" id="q3b" name="q3" value="b"><label for="q3b">Ноль: охваты будут, а механики под них нет</label></div>
+          <div class="opt"><input type="radio" id="q3c" name="q3" value="c"><label for="q3c">Ноль, и упаковка (сайт, отзывы, кейсы) тоже не готова</label></div>
+        </div>
+      </div>
+
+      <div class="qcard"><div class="qnum">Вопрос 4 / 6</div>
+        <h3>Представьте: завтра рилс набирает 100 000 просмотров. Что произойдет?</h3>
+        <div class="opts">
+          <div class="opt"><input type="radio" id="q4a" name="q4" value="a"><label for="q4a">Придут заявки в директ — обработаем вручную, как сможем</label></div>
+          <div class="opt"><input type="radio" id="q4b" name="q4" value="b"><label for="q4b">Почти ничего: людям некуда «упасть», контакты не соберутся</label></div>
+          <div class="opt"><input type="radio" id="q4c" name="q4" value="c"><label for="q4c">Часть загуглит нас, увидит сырой сайт — и уйдет к конкуренту</label></div>
+        </div>
+      </div>
+
+      <div class="qcard"><div class="qnum">Вопрос 5 / 6</div>
+        <h3>Сезон в разгаре. Сколько недель вы готовы потратить на сборку своими силами?</h3>
+        <div class="opts">
+          <div class="opt"><input type="radio" id="q5a" name="q5" value="a"><label for="q5a">2–3 недели силами команды — нормально, руки есть</label></div>
+          <div class="opt"><input type="radio" id="q5b" name="q5" value="b"><label for="q5b">Нисколько: каждая неделя сезона на счету, время команды дороже</label></div>
+          <div class="opt"><input type="radio" id="q5c" name="q5" value="c"><label for="q5c">Хочу, чтобы к пику сезона работала вся система целиком</label></div>
+        </div>
+      </div>
+
+      <div class="qcard"><div class="qnum">Вопрос 6 / 6</div>
+        <h3>Что болит сильнее всего?</h3>
+        <div class="opts">
+          <div class="opt"><input type="radio" id="q6a" name="q6" value="a"><label for="q6a">Контент и охваты есть или будут — нет понятной механики конверсии</label></div>
+          <div class="opt"><input type="radio" id="q6b" name="q6" value="b"><label for="q6b">Понимаю, что надо делать, но некому и некогда</label></div>
+          <div class="opt"><input type="radio" id="q6c" name="q6" value="c"><label for="q6c">Все разрозненно: сайт отдельно, соцсети отдельно, продажи отдельно</label></div>
+        </div>
+      </div>
+
+      <button type="button" class="qbtn" id="qsubmit" disabled>Показать мой формат</button>
+      <p class="qhint" id="qhint">Ответьте на все 6 вопросов</p>
+    </form>
+
+    <!-- result -->
+    <div id="result" role="region" aria-live="polite">
+      <div class="rhead">
+        <div class="eyebrow">Ваш результат</div>
+        <h3 id="rtitle"></h3>
+      </div>
+      <div class="rcard">
+        <div class="rband" id="rband"></div>
+        <div class="rbody">
+          <h4 id="rname"></h4>
+          <div class="rprice">
+            <span class="was"><span class="wlabel" id="rwlabel"></span><span id="rwas"></span></span>
+            <span class="now" id="rnow"></span>
+          </div>
+          <p class="rwhy" id="rwhy"></p>
+          <ul class="rlist" id="rlist"></ul>
+          <div class="rfacts">
+            <div class="rfact"><div class="l">🙋 Ваше участие</div><div class="v" id="rpart"></div></div>
+            <div class="rfact"><div class="l">📅 Срок</div><div class="v" id="rterm"></div></div>
+          </div>
+          <div class="recon" id="recon"></div>
+          <a class="rcta" href="#start">Начать в июле →</a>
+          <p class="ralt" id="ralt"></p>
+        </div>
+      </div>
+      <button type="button" class="rreset" id="rreset">Пройти тест заново</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ START ============ -->
+<section id="start">
+  <div class="wrap">
+    <h2>Как начнем</h2>
+    <div class="steps">
+      <div class="step"><b>Выбираете формат.</b> Можно начать с формата 2 или 4 и по результату перейти на «под ключ» — уплаченная сумма полностью зачтется в большой пакет при переходе в течение месяца.</div>
+      <div class="step"><b>Предоплата 50%.</b> Вторая половина — по сдаче результата.</div>
+      <div class="step"><b>Я присылаю бриф</b> → назначаем стартовый созвон → работаем.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><b>Анастасия Гагай</b> · воронки, конверторы, системы привлечения клиентов · июль 2026</div>
+</footer>
+
+<script>
+(function(){
+  var form = document.getElementById('qform');
+  var btn = document.getElementById('qsubmit');
+  var hint = document.getElementById('qhint');
+  var bar = document.getElementById('qbar');
+  var TOTAL = 6;
+
+  var TARIFFS = {
+    a: {
+      band: 'Формат 5 · для команды с руками',
+      title: 'У вас есть кому внедрять — не хватает логики и материалов',
+      name: 'Воронка: подробное ТЗ + все тексты + лид-магнит',
+      wlabel: 'Цена услуги на рынке',
+      was: '120–200 тыс. ₽+ и 1–2 месяца работы агентства',
+      now: '150 000 ₽',
+      why: 'Ваша команда получает не схему, а полный конструктор: собирайте — и запускайте. Логика воронки, где обычно ошибаются на месяцы, уже проверена и прописана.',
+      list: [
+        'Смыслы, офферы и ТЗ на 5–10 рилсов-конверторов',
+        'Лид-магнит: структура и текст под вашего клиента',
+        'Все тексты бота, кнопок и цепочек прогрева по типам лидов',
+        'Сегментация базы + ТЗ на технастройку и схема аналитики'
+      ],
+      part: '4–5 часов за проект', term: 'ТЗ за 2–3 недели',
+      econ: '💰 Один договор со средним чеком ~10 млн — и воронка стоила 1,5% от него. Ошибка в самостоятельной логике видна только через 1–2 месяца после запуска — а сезон один.',
+      alt: 'Хотите вообще не тратить время команды? Тот же объем под ключ — это <b>Формат 6 за 200 000 ₽</b>: доплата зачтется при переходе в течение месяца.'
+    },
+    b: {
+      band: 'Формат 6 · когда время дороже',
+      title: 'Ваше узкое место — время. Заберу все, кроме съемки рилсов',
+      name: 'Воронка под ключ',
+      wlabel: 'Цена услуги на рынке',
+      was: '230–250 тыс. ₽ с координацией 3 подрядчиков · у меня — цена при старте в июле',
+      now: '200 000 ₽',
+      why: 'От вас — созвон по смыслам и ваша экспертиза в стройке. Все остальное — логика, тексты, лид-магнит, настройка бота и аналитики — делаю я с командой. Никакой координации трех подрядчиков и «сломанного телефона», на котором теряется конверсия.',
+      list: [
+        'Все из формата 5: логика, тексты, сегментация, прогревы',
+        'Лид-магнит любой сложности: квиз, калькулятор, чек-лист',
+        'Техническая настройка бота и аналитики — под ключ',
+        'Тест и докрутка по первым данным после запуска'
+      ],
+      part: '1,5–2 часа за проект', term: 'запуск за 3–4 недели',
+      econ: '⏱️ Запуск на 2–3 недели раньше, чем при сборке своими силами. В разгар сезона это недели входящих заявок, которые иначе просто не случатся.',
+      alt: 'Есть руки на внедрение и хочется дешевле? <b>Формат 5 «конструктор» за 150 000 ₽</b>: та же логика, сборка ваша.'
+    },
+    c: {
+      band: 'Формат 7 · система целиком',
+      title: 'Точечные решения не сработают, пока все разрозненно',
+      name: 'Весь путь клиента: от охвата до лида',
+      wlabel: 'Цена услуги на рынке',
+      was: '370–700 тыс. ₽ и 2–3 месяца с несколькими подрядчиками',
+      now: '350 000 ₽ под ключ · как ТЗ — 180 000 ₽',
+      why: 'Сайт, воронка и аналитика из одних рук — конверсия не теряется на стыках между подрядчиками. Люди, которые гуглят вас перед сделкой, попадают на сайт, который продает; люди из соцсетей — в воронку, которая доводит до заявки.',
+      list: [
+        'Лендинг с маркетинговой проработкой — уже на 2-й неделе',
+        'Воронка с конверторами: лид-магниты, бот, цепочки',
+        'Сегментация и прогрев «холодных» и «отложенных» клиентов',
+        'Сквозная аналитика: видно в цифрах, где теряются люди'
+      ],
+      part: '2–3 часа за проект', term: 'первые лиды и данные — 6–8 недель',
+      econ: '💰 350 000 ₽ — это 3,5% одного среднего чека. Альтернатива — маркетолог в штат: поиск 1–2 месяца плюс 70–120 тыс./мес без гарантии системного взгляда. Система остается вашей навсегда: база копится, цепочки работают в следующие сезоны.',
+      alt: 'Бюджет пока не готов к «под ключ»? Начните с воронки — <b>Формат 5 за 150 000 ₽ или Формат 6 за 200 000 ₽</b>: сумма зачтется при расширении до полной системы в течение месяца.'
+    }
+  };
+
+  function answered(){
+    var n = 0;
+    for (var i = 1; i <= TOTAL; i++) if (form['q'+i] && form['q'+i].value) n++;
+    return n;
+  }
+  function refresh(){
+    var n = answered();
+    bar.style.width = (n/TOTAL*100) + '%';
+    btn.disabled = n < TOTAL;
+    hint.textContent = n < TOTAL ? ('Отвечено ' + n + ' из ' + TOTAL) : 'Готово — жмите кнопку';
+  }
+  form.addEventListener('change', refresh);
+
+  btn.addEventListener('click', function(){
+    var score = {a:0,b:0,c:0};
+    for (var i = 1; i <= TOTAL; i++) score[form['q'+i].value]++;
+    var order = ['a','b','c'];
+    var winner = order[0];
+    order.forEach(function(k){ if (score[k] > score[winner]) winner = k; });
+    var t = TARIFFS[winner];
+
+    document.getElementById('rband').textContent = t.band;
+    document.getElementById('rtitle').textContent = t.title;
+    document.getElementById('rname').textContent = t.name;
+    document.getElementById('rwlabel').textContent = t.wlabel;
+    document.getElementById('rwas').textContent = t.was;
+    document.getElementById('rnow').textContent = t.now;
+    document.getElementById('rwhy').textContent = t.why;
+    document.getElementById('rpart').textContent = t.part;
+    document.getElementById('rterm').textContent = t.term;
+    document.getElementById('recon').textContent = t.econ;
+    document.getElementById('ralt').innerHTML = t.alt;
+    var ul = document.getElementById('rlist');
+    ul.innerHTML = '';
+    t.list.forEach(function(x){ var li = document.createElement('li'); li.textContent = x; ul.appendChild(li); });
+
+    var res = document.getElementById('result');
+    res.classList.add('show');
+    res.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+
+  document.getElementById('rreset').addEventListener('click', function(){
+    form.reset();
+    document.getElementById('result').classList.remove('show');
+    refresh();
+    document.getElementById('quiz').scrollIntoView({behavior:'smooth'});
+  });
+
+  refresh();
+})();
+</script>
+</body>
+</html>
